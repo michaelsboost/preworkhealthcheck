@@ -9,9 +9,7 @@ A free open source alternative to UPS Prework Health Check Application.
 
 ### Tech
 
-Prework Health Check uses a number of open source projects to work properly:
-
-* [Poly UI Kit](https://github.com/Guilh/Poly) - Used for the application's user interface (hence the name "polyrise")
+Prework Health Check was designed using the free [Mobirise Website Builder](http://mobirise.com/).
 
 ### License
 MIT
