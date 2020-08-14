@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prework Health Check</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
+    <meta name="description" content="A free and open source alternative to the UPS Prework Health Check for COVID-19">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <style>
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #ccc;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #ccc;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #ccc;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header5 cid-s7FxANxOrb mbr-fullscreen" id="header5-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="mbr-white col-md-10">
+            <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-1" id="header">
+              Prework Health Check
+            </h1>
+            <input type="text" id="getName" class="mbr-section-title align-center mbr-fonts-style display-2" placeholder="First and Last Name" style="padding: 0; margin: 0; width: 100%; background: transparent; border: 0; color: #fff; text-transform: capitalize;" /><br><br>
+            
+            <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2" id="datentime" style="display: none;">
+              <span id="setDate">date</span> <span id="timeNow">time</span>
+            </h1>
+            <p class="mbr-text align-center display-5 pb-3 mbr-fonts-style" id="biotext">
+              To participate in the Prework Health Check, please review the below questions:<br>
+              1. Do you have cold or flu symptoms like fever, chills, muscle pain, or sore throat?<br>
+              2. Do you have a NEW onset of cough or shortness of breath?<br>
+              3. Do you have a NEW onset of loss of taste or smell?<br>
+              4. Has it been less than 10 days since any of these symptoms started?<br>
+              5. Have you had close contact with someone diagnosed with COVID-19 in the past 14 days?<br>
+              Do any of the above apply to you?
+            </p>
+            
+            <div class="mbr-section-btn align-center" style="text-align: center;" id="buttons">
+              <a class="btn btn-md btn-white display-4" id="nobtn" href="javascript:void(0)">NO</a>
+              <a class="btn btn-md btn-secondary display-4" id="yesbtn" href="javascript:void(0)">YES</a>
+            </div>
+
+            <p class="mbr-text align-center display-5 pb-3 mbr-fonts-style" id="footer"><br>
+              For further information, see the latest CDC guidelines<br>
+              <a href="http://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html" target="_blank">http://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+    <script>
+      function displayTime() {
+        var now = new Date();
+        timeNow.textContent = now.toLocaleTimeString();
+      }
+      function displayDate() {
+        var noww = new Date();
+        var month = noww.getMonth() + 1;
+        var currentDate = noww.getDate();
+        var year = noww.getFullYear();
+        setDate.textContent = month + '/' + currentDate + '/' + year;
+      }
+      
+      getName.focus();
+      
+      yesbtn.onclick = function() {
+        if (!getName.value) {
+          alert("Name field is empty!");
+          return false;
+        }
+        
+        // change background
+        document.querySelector('.header5').style.background = '#f00';
+        
+        // let user know of work status
+        header.innerHTML = "📞<br>You are not ready to work.";
+        biotext.textContent = "One or more answers indicate you are not ready to work today. Stay home, contact your health care provider for guidance/evaluation, and follow call n procedure to notify your management that you are staying home.";
+        
+        // show date and date
+        datentime.style.display = 'block';
+        displayDate();
+        displayTime();
+        
+        // hide other media
+        buttons.style.display = "none";
+        footer.style.display = "none";
+      }
+      
+      nobtn.onclick = function() {
+        if (!getName.value) {
+          alert("Name field is empty!");
+          return false;
+        }
+        
+        // change backgroundß
+        document.querySelector('.header5').style.background = '#0f0';
+        
+        // let user know of work status
+        header.innerHTML = "✔️<br>Ready to work";
+        biotext.style.color = '#000';
+        biotext.textContent = "Your responses indicate you are ready to work today.";
+        
+        // show date and date
+        datentime.style.display = 'block';
+        displayDate();
+        displayTime();
+        
+        // hide other media
+        buttons.style.display = "none";
+        footer.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
