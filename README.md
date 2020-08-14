@@ -34,8 +34,8 @@ You can submit a pull request or simply share the project :)
 
 Of course Prework Health Check is free and open source, so you can always fork the project and have fun :)
 
-***As of August 14, 2020 Prework Health Check is no longer an active project. ***  
-***All updates as of that date and on are solely contributor based implementations. ***
+<i><b>As of August 14, 2020 Prework Health Check is no longer an active project.</b></i>  
+<i><b>All updates as of that date and on are solely contributor based implementations.</b></i>  
 
 [![ko-fi](https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0)](https://ko-fi.com/michaelsboost)
 
