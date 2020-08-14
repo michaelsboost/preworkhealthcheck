@@ -18,7 +18,7 @@ MIT
 
 ### Availability
 
-Prework Health Check is only available as a [web application](http://michaelsboost.github.io/Prework Health Check) but you can use [WebDGap](http://michaelsboost.github.io/WebDGap) to export it for your platform as a desktop application, [WebDGap](http://michaelsboost.github.io/WebDGap) will also export a [PhoneGap Build](http://build.phonegap.com/) project which will speed up your time on porting it over to mobile platforms as well.
+Prework Health Check is only available as a [web application](http://michaelsboost.github.io/preworkhealthcheck) but you can use [WebDGap](http://michaelsboost.github.io/WebDGap) to export it for your platform as a desktop application, [WebDGap](http://michaelsboost.github.io/WebDGap) will also export a [PhoneGap Build](http://build.phonegap.com/) project which will speed up your time on porting it over to mobile platforms as well.
 
 ### Author
 
